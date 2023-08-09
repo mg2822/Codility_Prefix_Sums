@@ -1,0 +1,25 @@
+int solution(int A, int B, int K) {
+  if( A == B)
+  {
+      return (A % K == 0) ? 1: 0;
+  }
+  
+  int r = A % K;
+  int first = INT_MIN;
+  if( r == 0)
+  {
+     first = A;
+  }
+  else
+  {
+      f = A +(K-r);
+      if(f > B)
+      {
+          return 0;
+      }   
+  }
+  
+  // f + x*K = B
+  int x = (B-f)/K;
+  return 1 + x;
+}
